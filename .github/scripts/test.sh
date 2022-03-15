@@ -4,9 +4,8 @@ echo "working bash script"
 
 # printenv FILE_EXTENSION
 
-# for FILE in *; do echo $FILE; done
-
 for FILE in *; do
+  echo $FILE;
   if grep -q "${SEARCH_WORD}" $File; then
     echo "$FILE matches string"
   fi
