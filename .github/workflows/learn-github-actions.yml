@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-         chmod +x /.github/scripts/test.sh
-         /.github/scripts/test.sh
+         chmod +x .github/scripts/test.sh
+         .github/scripts/test.sh
         shell: bash
