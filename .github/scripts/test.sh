@@ -7,7 +7,7 @@ echo "working bash script"
 # for FILE in *; do echo $FILE; done
 
 for FILE in *; do
-  if grep -q "${SEARCH_WORD}" "$File"; then
+  if grep -q "${SEARCH_WORD}" $File; then
     echo "$FILE matches string"
   fi
 done
