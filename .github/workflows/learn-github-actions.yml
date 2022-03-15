@@ -1,5 +1,10 @@
 name: learn-github-actions
 on: [push]
+env:
+  FILE_EXTENSION: bak
+  SEARCH_WORD: example
+  REPLACEMENT_WORD: blah
+  
 jobs:
   check-folder-content:
     runs-on: ubuntu-latest
