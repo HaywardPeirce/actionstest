@@ -6,7 +6,7 @@ echo "working bash script"
 
 for FILE in *; do
   echo $FILE;
-  if [[ "$FILE" *"${SEARCH_WORD}"* ]]; then
+  if [[ "$FILE" == *"${SEARCH_WORD}"* ]]; then
     echo "$FILE matches string"
   fi
 done
