@@ -16,7 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
+        run: |
          chmod +x .github/scripts/test.sh
          .github/scripts/test.sh
         shell: bash
+      - uses: actions/checkout@v2
+        run: |
+          git add .
+          git commit -m "generated"
+          git push
