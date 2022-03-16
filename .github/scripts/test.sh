@@ -11,6 +11,7 @@ for FILE in *; do
   if [[ "$FILE" == *"${SEARCH_WORD}"* ]]; then
     echo "It's there."
     echo ${FILE/$SEARCH_WORD/$REPLACEMENT_WORD}
+    cp $FILE ${FILE/$SEARCH_WORD/$REPLACEMENT_WORD}.bak
   fi
 done
 
