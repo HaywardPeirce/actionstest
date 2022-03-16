@@ -2,12 +2,15 @@ echo "working bash script"
 
 # echo ${FILE_EXTENSION}
 
-# printenv FILE_EXTENSION
+# FILE_EXTENSION: bak
+# SEARCH_WORD: example
+# REPLACEMENT_WORD: blah
 
 for FILE in *; do
   echo $FILE;
   if [[ "$FILE" == *"${SEARCH_WORD}"* ]]; then
-    echo "$FILE matches string"
+    echo "It's there."
+    echo ${FILE/$SEARCH_WORD/$REPLACEMENT_WORD}
   fi
 done
 
