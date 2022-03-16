@@ -15,6 +15,8 @@ for FILE in *; do
   fi
 done
 
+ls
+
 # if grep -Fxq "string" file.txt; then #do some code...#; 
 
 # fi
