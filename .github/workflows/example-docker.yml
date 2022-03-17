@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: ./.github/docker@main
+        uses: .github/docker@main
         id: hello
         with:
           who-to-greet: 'Mona the Octocat'
