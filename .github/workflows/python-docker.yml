@@ -14,5 +14,5 @@ jobs:
       - name: Run tests inside the container
         id: docker-run-step
         run: docker run python-docker
-      - run: echo "Variable from inside the docker container (printed outside the container) is; ${{ steps.docker-run-step.outputs.variable}}"
+      - run: echo "Variable from inside the docker container (printed outside the container) is; ${{ steps.docker-run-step.outputs.outputValue}}"
         shell: bash
