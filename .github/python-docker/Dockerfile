@@ -1,12 +1,9 @@
-FROM ubuntu:latest
+FROM python:3.9-slim-bullseye
 
-RUN apt-get update
-RUN apt-get install -y python3.8
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-RUN python -v
-
-WORKDIR /home
-
-COPY test.py ./test.py
+COPY test.py .
 
 ENTRYPOINT [ "python", "./test.py" ]
