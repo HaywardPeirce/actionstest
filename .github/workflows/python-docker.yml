@@ -1,5 +1,8 @@
 on: [push]
 
+env:
+  INPUT_ENV: inputvalue
+
 jobs:
   python-hello-world-docker:
     runs-on: ubuntu-latest
