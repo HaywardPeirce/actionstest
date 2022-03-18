@@ -9,7 +9,7 @@ jobs:
       - name: files list
         run: ls -a
       - name: Build Docker image 
-        run: docker build -t example-docker .github/docker/
+        run: docker build -t example-docker .github/example-docker/
       - name: Run tests inside the container
         id: docker-run-step
         run: docker run example-docker
