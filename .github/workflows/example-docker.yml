@@ -11,4 +11,7 @@ jobs:
       - name: Build Docker image 
         run: docker build -t example-docker .github/docker/
       - name: Run tests inside the container
+        id: docker-run-step
         run: docker run example-docker
+      - run: echo "time is; ${{ steps.docker-run-step.outputs.time}}"
+        shell: bash
